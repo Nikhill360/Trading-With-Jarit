@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
     return (
         <nav className="w-full py-[2vw] bg-[rgb(239, 234, 227)] flex items-center justify-between px-[2vw] bg-[#024430]">
@@ -10,7 +12,8 @@ export default function Navbar() {
                 <li><a href="#twj-auto-trading-bot">TWJ-Auto-Trading Bot</a></li>
                 <li><a href="#twj-mobile-software">TWJ-Mobile-Software</a></li>
                 <li><a href="#client-feedback">Client-Feedback-&-Testimonial</a></li>
-                <li><a href="#how-to-use-twj-live-software">How to use TWJ-Live-Software in Forex</a></li>
+
+                <li><Link  href={"/how-to-use-twj-live-signals-software-in-forex-trading"}>How to use TWJ-Live-Software in Forex</Link></li>
             </ul>
         </nav>
 
