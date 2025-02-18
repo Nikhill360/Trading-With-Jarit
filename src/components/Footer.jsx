@@ -25,7 +25,9 @@ export default function Footer() {
                 <p>Copyright © 2025 Trading With Jarit | Powered by Trading With Jarit</p>
                 <p>All rights reserved.</p>
             </div>
-        </footer>
+        </footer> 
+        
+        
     );
 }
 
