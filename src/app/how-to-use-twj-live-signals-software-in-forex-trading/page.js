@@ -1,96 +1,63 @@
+'use client'
+
 import Link from "next/link";
+import { useState } from "react"; // Added useState for managing open state
 import { FaCircle } from "react-icons/fa6";
 
 export default function Forex() {
+    const [open, setOpen] = useState(false); // Initialize open state
+
     return (
-        // <div className="bg-[#093c27] min-w-sm  min-h-sm pl-2 pt-2">
-        //     <h1 className="text-[#ffde72] text-5xl tracking-tighter leading-1 font-semibold mb-4 ">How to use TWJ LIVE SIGNALS SOFTWARE to trade in forex market ?</h1>
-        //     <p className="tracking-normal mt-10 mb-6 text-[2.8vh]">You can use TWJ LIVE SIGNALS SOFTWARE in forex with the same confirmations as in binary; however, the timeframe matters a lot. It depends whether you want to take a forex position for a few hours to minutes (known as scalping), intraday, or weekly timeframe</p>
-
-        //     <p className="text-[2.8vh] mb-6">So this should be your perfect timeframe</p>
-        //     <div>
-        //         <h1 className="text-[2.8vh] mb-6">✅FOR SCALPING- 5 MIN TIMEFRAME</h1>
-        //         <h1 className="text-[2.8vh] mb-6">✅INTRADAY – 30 MIN TIMEFRAME</h1>
-        //         <h1 className="text-[2.8vh] mb-6">✅SWING TRADE – 4H OR DAILY TIMEFRAME</h1>
-
-        //     </div>
-
-        //     <div className="mt-16">
-        //         <h1 className="text-[#ffde72] text-5xl tracking-tighter leading-1 font-semibold mb-4 ">How to set target & sl in forex using the software ?</h1>
-        //         <p className="tracking-normal mt-10 mb-6 text-[2.8vh]">So for this you need to keep 2 things in mind , first one is ( RRR which means risk to reward ratio ) and second one is the important support and resistance zones</p>
-        //     </div>
-
-        //     <div className="relative pt-5 ml-[-8] w-screen h-50 flex justify-between bg-[#032b1f] 
-        //                     before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:shadow-md before:shadow-white
-        //                     after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] after:shadow-md after:shadow-white">
-        //         <div className="pl-10 w-[50%]">
-        //             <img src="https://tradingwithjarit.in/wp-content/uploads/2025/02/IMG_20250101_185421_124-2-1024x463-1.jpg" className="w-[100%] pl-10" />
-        //         </div>
-        //         <div className="w-[50%]">
-        //             <h1 className="text-[#fffdde] leading-8 tracking-wide pl-6">
-        //                 The RRR (risk to reward ratio) should be more than 1:2 for better trades. 1:2 to 1:4 are very good ratios. In simple words, if your target is 100 pips away from entry and stop loss is only 25 pips, it means the risk-to-reward ratio is highly good at 1:4.
-        //             </h1>
-        //         </div>
-
-
-
-        //     </div>
-
-        //     <div className="flex justify-center mt-10">
-        //     <Link href={"/twj-pc-software-2"} className="  mb-10 bg-white text-[#032b1f] pl-[70vh] pr-[70vh] pt-2 pb-2 ">KNOW MORE ABOUT TWJ SIGNAL SOFTWARE</Link>
-
-        //     </div>
-
-
-
-
-
-
-        // </div>
         <>
-        <div className="w-screen min-h-screen flex justify-center bg-[#f3f9fb] pt-11 pb-36">
-            <div className="bg-white w-full max-w-4xl h-auto p-8 rounded-lg shadow-lg border mt-10 mx-4 sm:mx-10 mb-10 pt-20 border-gray-300">
-                <h1 className="font-thin text-3xl mb-6 text-[#000000]">Terms & Conditions</h1>
-                <p className="text-l mb-6 text-justify text-gray-700">Effective Date: 29-10-2024</p>
-                <p className="text-l mb-6 text-justify text-gray-700">Welcome to Trading with Jarit. By accessing our website (tradingwithjarit.in) and purchasing or using any of the informational software we provide, you agree to comply with and be bound by the following terms and conditions. Please read them carefully. If you do not agree with these terms, please refrain from using our services.</p>
+            <div>
+                
+                <h1 className="text-center text-5xl  font-bold text-[#FFDE72]">Frequently Asked Questions</h1>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">1. Scope of Service:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">Trading with Jarit offers software solutions for informational purposes only. These tools are designed to help users gain insights and analyze various trading-related data. Trading with Jarit does not provide financial advice, nor does it make any guarantee of accuracy or predictability of outcomes based on the software’s analysis.</p>
+                <div className="flex-col flex justify-center ">
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">2. Disclaimer of Accuracy:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">While we strive to provide valuable and informative data through our software, Trading with Jarit does not guarantee 100% accuracy in its predictions or analyses. Market trends, data sources, and other variables can affect the accuracy of information provided. Users acknowledge that all data, predictions, and other insights generated by our software are for reference only and should not be solely relied upon for making financial decisions.</p>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">3. Limitation of Liability:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">Trading with Jarit shall not be liable for any loss, damage, or financial loss incurred as a result of using our software, including but not limited to direct, indirect, incidental, or consequential damages. The user agrees to assume full responsibility for any trading or financial decisions made using information provided by our software. Trading with Jarit is not responsible for any outcomes of such decisions.</p>
+                <div className="relative p-4">
+                    <h1 className="cursor-pointer p-1 bg-[#757575] font-semibold text-xl" onClick={() => setOpen(open === 1 ? null : 1)}>In which brokers can i use the software?</h1>
+                    <div className={`transition-all duration-300 ease-in-out bg-[#757575] p-4 rounded ${open === 1 ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                        <div>You can use it in any binary broker like quotex, binomo, olymptrade, iqoption, pocket option.</div>
+                    </div>
+                </div>
+                
+                <div className="relative p-4">
+                    <h1 className="cursor-pointer px-1 bg-[#757575] font-semibold text-xl" onClick={() => setOpen(open === 2 ? null : 2)}>Is there any difference between mobile & pc software ?</h1>
+                    <div className={`transition-all duration-300 ease-in-out bg-[#757575] p-4 rounded ${open === 2 ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                        <div>There is no difference, software is same just the installation process is different which can be done through anydesk / teamviewer app.</div>
+                    </div>
+                </div>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">4. User Responsibility:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">Users are responsible for understanding the nature of informational software and the inherent risks of relying on analytical tools for trading decisions. Users agree to use the software for informational purposes only and are advised to consult a professional financial advisor for personalized financial guidance.</p>
+                <div className="relative p-4">
+                    <h1 className="cursor-pointer px-1 bg-[#757575] font-semibold text-xl" onClick={() => setOpen(open === 3 ? null : 3)}>How much signals does it gives & any specific time ?</h1>
+                    <div className={`transition-all duration-300 ease-in-out bg-[#757575] p-4 rounded ${open === 3 ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                        <div>You can use our software anytime as it works 24 hours & unlimited signals.</div>
+                    </div>
+                </div>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">5. Refunds Policy:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">Returns are accepted only within three (3) calendar days from the date of purchase. Customers must provide a valid reason for the return along with proof of purchase, such as an invoice or receipt. Please refer to refund policy for complete details.</p>
+                <div className="relative p-4">
+                    <h1 className="cursor-pointer px-1 bg-[#757575] font-semibold text-xl" onClick={() => setOpen(open === 4 ? null : 4)}>What is the accuracy and do you use martingale?</h1>
+                    <div className={`transition-all duration-300 ease-in-out bg-[#757575] p-4 rounded ${open === 4 ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                        <div>Software accuracy is upto 90-95%+ and martingale is not required as it gives direct winning sureshot signals</div>
+                    </div>
+                </div>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">6. Intellectual Property:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">All software, content, and materials provided by Trading with Jarit are the intellectual property of Trading with Jarit. Users may not copy, distribute, or modify the software or any other proprietary material provided without explicit permission.</p>
+                <div className="relative p-4">
+                    <h1 className="cursor-pointer px-1 bg-[#757575] font-semibold text-xl" onClick={() => setOpen(open === 5 ? null : 5)}>What is the software cost ?</h1>
+                    <div className={`transition-all duration-300 ease-in-out bg-[#757575] p-4 rounded ${open === 5 ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                        <div>The software cost is $40 / Rs 3499 including installation and lifetime access. With otc market access it’s $60 / Rs 4999.</div>
+                    </div>
+                </div>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">7. Indemnification:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">By using Trading with Jarit’s software, users agree to indemnify and hold harmless Trading with Jarit, its employees, and affiliates from any claims, damages, or losses arising from or related to their use of the software or violation of these terms.</p>
+                </div>
+               
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">8. Changes to Terms and Conditions:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">Trading with Jarit reserves the right to modify or update these Terms and Conditions at any time without prior notice. Users are encouraged to review this page periodically for any changes. Continued use of our services following changes implies acceptance of those changes.</p>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">9. Governing Law and Jurisdiction:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">These Terms and Conditions are governed by and construed in accordance with the laws of [Your Jurisdiction]. Any disputes arising from or related to these terms or the use of our software will be resolved in the courts of [Your Jurisdiction].</p>
 
-                <h2 className="font-thin text-2xl mt-8 mb-6 text-black">10. Contact Information:</h2>
-                <p className="text-l mb-6 text-justify text-gray-700">For any questions, concerns, or grievances, please contact us at:</p>
-                <p className="text-l mb-6 text-justify text-gray-700">Email: tradingwithjarit@gmail.com</p>
-                <p className="text-l mb-6 text-justify text-gray-700">Telegram: <a href="https://telegram.me/jaritmunjal12" className="text-blue-500">https://telegram.me/jaritmunjal12</a></p>
-                <p className="text-l mt-4 text-justify text-black">By purchasing and using the software provided by Trading with Jarit, you acknowledge that you have read, understood, and agree to abide by these Terms and Conditions.</p>
+                
             </div>
-        </div>
-
-           
         </>
-
     );
 } 
