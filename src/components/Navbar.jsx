@@ -9,7 +9,7 @@ export default function Navbar() {
             <ul className="flex space-x-5 text-white text-[14PX] ">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#twj-pc-software">TWJ-PC-Software</a></li>
-                <li><a href="#twj-auto-trading-bot">TWJ-Auto-Trading Bot</a></li>
+                <li><Link  href={"/autotrading-bot"}>autotrading-bot</Link></li>
                 <li><a href="#twj-mobile-software">TWJ-Mobile-Software</a></li>
                 <li><Link  href={"/client-feedbacks-testimonials-2"}>client-feedbacks-testimonials-2</Link></li>
 
